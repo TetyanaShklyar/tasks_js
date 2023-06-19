@@ -1,42 +1,25 @@
-const personalPlanPeter = {
-  name: 'Peter',
-  age: '29',
-  skills: {
-    languages: ['ru', 'eng'],
-    programmingLangs: {
-      js: '20%',
-      php: '10%',
-    },
-    exp: '1 month',
-  },
-  showAgeAndLangs: function (obj) {
-    let { age } = obj
-    let { languages } = obj.skills
+const family = ['Peter', 'Ann', 'Alex', 'Linda']
 
-    let str = `Мне ${age} и я владею языками: `
-
-    languages.forEach((lang) => {
-      str += `${lang.toUpperCase()} `
-    })
-
-    return str
-  },
-}
-
-function showExperience(plan) {
-  let { exp } = plan.skills
-
-  return exp
-}
-
-function showProgrammingLangs(plan) {
+function showFamily(arr) {
   let str = ''
 
-  let { programmingLangs } = plan.skills
+  arr.length === 0 ? (str = 'Семья пуста') : (str = 'Семья состоит из: ')
 
-  for (let key in programmingLangs) {
-    str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
-  }
+  arr.forEach((element) => {
+    str += `${element} `
+  })
 
   return str
 }
+
+// console.log(showFamily(family))
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin']
+
+function standardizeStrings(arr) {
+  arr.forEach((element) => {
+    console.log(element.toLowerCase())
+  })
+}
+
+console.log(standardizeStrings(favoriteCities))
