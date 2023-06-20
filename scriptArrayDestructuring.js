@@ -22,4 +22,24 @@ function standardizeStrings(arr) {
   })
 }
 
-console.log(standardizeStrings(favoriteCities))
+// console.log(standardizeStrings(favoriteCities))
+
+const someString = 'This is some strange string'
+
+function reverse(str) {
+  if (typeof str !== 'string') {
+    return 'Ошибка!'
+  }
+  let arrStr = str.split('').reverse().join('')
+
+  return arrStr
+
+  // Решение при помощи цикла
+  // let newStr = '';
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //     newStr += str[i];
+  // }
+  // return newStr
+}
+
+console.log(reverse(someString)) // gnirts egnarts emos si sihT
